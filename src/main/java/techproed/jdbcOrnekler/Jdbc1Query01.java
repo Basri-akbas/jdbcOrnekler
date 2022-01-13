@@ -30,13 +30,15 @@ public class Jdbc1Query01 {
 		
 		while (veri.next()) {
 			System.out.println(veri.getString("isim")+" "+veri.getInt("maas"));
+			
+			System.out.println("Personel adi:"+veri.getString(1)+"      Maas:"+veri.getInt(2));
 		}
 		
+		// 6--olusturulan nesneleri bellekten kaldiralim
 		
-		
-		
-		
-
+		con.close();
+		st.close();
+		veri.close();
 	}
 
 }
